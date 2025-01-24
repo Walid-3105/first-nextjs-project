@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md py-4 px-10 lg:px-16 flex justify-between items-center">
       <div className="font-bold text-sm lg:text-lg">
-        <Link href="/">Blog</Link>
+        <Link href="/">Blogs</Link>
       </div>
       <div className="flex gap-2 text-sm lg:text-lg font-semibold items-center">
         <Link href="/">Home</Link>
