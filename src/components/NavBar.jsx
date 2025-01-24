@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  LoginLink,
-  LogoutLink,
-  RegisterLink,
-  useKindeBrowserClient,
-} from "@kinde-oss/kinde-auth-nextjs";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -24,18 +19,25 @@ const Navbar = () => {
         {isAuthenticated ? (
           <>
             <span>Hello, {user.family_name}</span>
-            <LogoutLink className="font-bold text-sm lg:text-lg">
+            <Link
+              href={"/api/auth/logout"}
+              className="font-bold text-sm lg:text-lg"
+            >
               LogOut
-            </LogoutLink>
+            </Link>
           </>
         ) : (
           <>
-            <LoginLink className="font-bold text-sm lg:text-lg">
+            <Link
+              href={"/api/auth/login"}
+              className="font-bold text-sm lg:text-lg"
+            >
               LOGIN
-            </LoginLink>
-            <RegisterLink className="font-bold text-sm lg:text-lg">
-              REGISTER
-            </RegisterLink>
+            </Link>
+            <Link
+              href={"/api/auth/register"}
+              className="font-bold text-sm lg:text-lg"
+            ></Link>
           </>
         )}
       </div>
