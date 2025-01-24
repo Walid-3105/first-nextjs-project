@@ -37,7 +37,9 @@ const Navbar = () => {
             <Link
               href={"/api/auth/register"}
               className="font-bold text-sm lg:text-lg"
-            ></Link>
+            >
+              REGISTER
+            </Link>
           </>
         )}
       </div>
